@@ -3,5 +3,6 @@ export default class DataDict {
     this.dataDictId = null
     this.dataDictName = null
     this.dataDictKey = null
+    this.description = null
   }
 }

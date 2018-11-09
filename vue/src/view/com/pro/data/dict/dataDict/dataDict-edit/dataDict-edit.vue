@@ -18,6 +18,11 @@
             </FormItem>
           </Col>
           <Col :xs="24" :sm="20" :md="18" :lg="14">
+            <FormItem label="描述：" prop="description">
+              <Input v-model="dataDict.description" placeholder="输入描述"></Input>
+            </FormItem>
+          </Col>
+          <Col :xs="24" :sm="20" :md="18" :lg="14">
             <FormItem>
               <Button class="margin-right-8" @click="gotoList()">取消</Button>
               <Button class="margin-right-8" @click="reset()">重置</Button>

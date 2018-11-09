@@ -9,6 +9,7 @@ create table PRO_DATA_DICT (
   DATA_DICT_ID                    varchar(36)         character set utf8 collate utf8_bin  not null comment '数据字典编号',
   DATA_DICT_NAME                  varchar(64)         character set utf8 collate utf8_bin  not null comment '数据字典名称',
   DATA_DICT_KEY                   varchar(64)         character set utf8 collate utf8_bin  not null comment '数据字典标识',
+  DESCRIPTION                     varchar(255)        character set utf8 collate utf8_bin      null comment '描述',
   primary key (DATA_DICT_ID),
   unique key (DATA_DICT_KEY)
 )ENGINE=INNODB DEFAULT CHARSET=utf8 comment '数据字典';

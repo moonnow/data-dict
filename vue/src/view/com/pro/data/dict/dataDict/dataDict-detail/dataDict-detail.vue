@@ -19,6 +19,10 @@
           <p>数据字典标识：{{ dataDict.dataDictKey }}</p>
           <Divider dashed />
         </Col>
+        <Col :xs="24" :sm="12" :md="12" :lg="8">
+          <p>描述：{{ dataDict.description }}</p>
+          <Divider dashed />
+        </Col>
       </Row>
     </Card>
   </div>

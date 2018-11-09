@@ -13,6 +13,8 @@ public class DataDictVO implements java.io.Serializable {
 
   protected java.lang.String dataDictKey; // 数据字典标识
 
+  protected java.lang.String description; // 描述
+
   public java.lang.String getDataDictId() {
     return dataDictId;
   }
@@ -35,6 +37,14 @@ public class DataDictVO implements java.io.Serializable {
 
   public void setDataDictKey(java.lang.String dataDictKey) {
     this.dataDictKey = dataDictKey;
+  }
+
+  public java.lang.String getDescription() {
+    return description;
+  }
+
+  public void setDescription(java.lang.String description) {
+    this.description = description;
   }
 
   @Override

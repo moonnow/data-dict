@@ -13,6 +13,8 @@ public class DataDictQuery implements java.io.Serializable {
 
   protected java.lang.String dataDictKey; // 数据字典标识
 
+  protected java.lang.String description; // 描述
+
   protected java.util.List<java.lang.String> dataDictIdAndin; // 数据字典编号Andin查询
 
   protected java.lang.String dataDictKeyAndeq; // 数据字典标识Andeq查询
@@ -20,6 +22,8 @@ public class DataDictQuery implements java.io.Serializable {
   protected java.lang.String dataDictNameAndKeyLike; // 数据字典名称AndKeyLike查询
 
   protected java.lang.String dataDictKeyOrKeyLike; // 数据字典标识OrKeyLike查询
+
+  protected java.lang.String descriptionOrKeyLike; // 描述OrKeyLike查询
 
   public java.lang.String getDataDictId() {
     return dataDictId;
@@ -43,6 +47,14 @@ public class DataDictQuery implements java.io.Serializable {
 
   public void setDataDictKey(java.lang.String dataDictKey) {
     this.dataDictKey = dataDictKey;
+  }
+
+  public java.lang.String getDescription() {
+    return description;
+  }
+
+  public void setDescription(java.lang.String description) {
+    this.description = description;
   }
 
   public java.util.List<java.lang.String> getDataDictIdAndin() {
@@ -75,6 +87,14 @@ public class DataDictQuery implements java.io.Serializable {
 
   public void setDataDictKeyOrKeyLike(java.lang.String dataDictKeyOrKeyLike) {
     this.dataDictKeyOrKeyLike = dataDictKeyOrKeyLike;
+  }
+
+  public java.lang.String getDescriptionOrKeyLike() {
+    return descriptionOrKeyLike;
+  }
+
+  public void setDescriptionOrKeyLike(java.lang.String descriptionOrKeyLike) {
+    this.descriptionOrKeyLike = descriptionOrKeyLike;
   }
 
   @Override

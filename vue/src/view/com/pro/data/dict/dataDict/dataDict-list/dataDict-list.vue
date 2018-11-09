@@ -21,6 +21,9 @@
               <FormItem label="数据字典标识：">
                 <Input v-model="dataDictVagueQuery.dataDictKey" placeholder="输入数据字典标识"></Input>
               </FormItem>
+              <FormItem label="描述：">
+                <Input v-model="dataDictVagueQuery.description" placeholder="输入描述"></Input>
+              </FormItem>
               <Button type="primary" @click="vagueQuery()" :loading="vagueQuerySubmitting">精准查询</Button>
             </Form>
           </div>
@@ -54,7 +57,8 @@ export default {
       columns: [
         { type: 'selection', width: 50, align: 'center', fixed: 'left' },
         { title: '数据字典名称', key: 'dataDictName', width: 200 },
-        { title: '数据字典标识', key: 'dataDictKey', width: 200 }
+        { title: '数据字典标识', key: 'dataDictKey', width: 200 },
+        { title: '描述', key: 'description', width: 200 }
       ],
       dataSet: [],
       selectDataRow: [],
@@ -191,6 +195,7 @@ export default {
         let dataDictQueryKeyLikeValue = new DataDictQuery()
         dataDictQueryKeyLikeValue.dataDictNameAndKeyLike = '%' + keyLikeValue + '%'
         dataDictQueryKeyLikeValue.dataDictKeyOrKeyLike = '%' + keyLikeValue + '%'
+        dataDictQueryKeyLikeValue.descriptionOrKeyLike = '%' + keyLikeValue + '%'
         this.queryDataDict(dataDictQueryKeyLikeValue).then(res => {
           if (res.data.isSuccess && res.data.statusCode === 200) {
             this.dataSet = res.data.data
